@@ -15,4 +15,14 @@ Dependencies include:
 * StatsModels 0.9.0
 
 To run with default settings (Perform L2 tests, but don't save the Posterior Samples), type:
-> python CounterFair_Emulate.py
+```
+python CounterFair_Emulate.py
+```
+
+The following results should print:
+```
+Unfair RMSE:                0.870
+FTU RMSE:                   0.891
+Level 2 (Fair K) RMSE:      0.929
+Level 3 (Fair Add) RMSE:    0.918
+```
