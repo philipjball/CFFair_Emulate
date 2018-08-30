@@ -134,7 +134,7 @@ def L2_Model_Replication(law_train_dic, law_test_dic, save_models = False):
         model = pystan.StanModel(file = './law_school_train.stan')
         print('Finished compiling model!')
         # Commence the training of the model to infer weights (500 warmup, 500 actual)
-        fit = model.sampling(data = law_train_dic, iter=100, chains = 1)
+        fit = model.sampling(data = law_train_dic, iter=1000, chains = 1)
         post_samps = fit.extract()
         # Save parameter posterior samples if specified
         if save_models:
